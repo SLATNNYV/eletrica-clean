@@ -1,0 +1,25 @@
+{
+  "name": "eletrica-clean",
+  "version": "1.0.0",
+  "description": "Sistema interno de gerenciamento para a Auto Elétrica Clean",
+  "main": "server/index.js",
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "server": "node server/index.js",
+    "client": "npm --prefix client run dev",
+    "build:client": "npm --prefix client run build",
+    "dev": "concurrently \"node server/index.js\" \"npm --prefix client run dev\""
+  },
+  "keywords": [
+    "eletrica-clean",
+    "auto-eletrica",
+    "os",
+    "ordem-de-servico",
+    "workshop"
+  ],
+  "author": "Elétrica Clean",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.4"
+  }
+}
